@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="myInp" />
+    <button type="button" onclick="addLi()">add</button>
+    <ul id="myUl">
+        <li>test1</li>
+    </ul>
+</body>
+<script type="text/javascript">
+function addLi() {
+    var str = "<li>"+$('#myInp').val()+"</li>";
+    $('#myUl').append(str);
+}
+</script>
+
+</html>
