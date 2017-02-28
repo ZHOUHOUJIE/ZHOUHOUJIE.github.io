@@ -17,6 +17,7 @@ h1 {
     font-size: 70px;
     text-shadow: 1px 2px #272838, 2px 4px #e7e7e8;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 h4 {
