@@ -1,1 +1,41 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>这里是简历</title><link rel=stylesheet href=./static/animate.min.css><script src=./static/swiper.animate1.0.2.min.js></script><link href=/static/css/app.f1a33aac3cb6d9ee06b21a5724ad225e.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.528d8c51addd4a2a774a.js></script><script type=text/javascript src=/static/js/vendor.56751442fcaaf1705063.js></script><script type=text/javascript src=/static/js/app.e51b25a4723e764e66e6.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+    window.onload = MyCoolInitFunc
+
+    function MyCoolInitFunc() {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+        var isEdge = userAgent.indexOf("Edge") > -1; //判断是否IE的Edge浏览器
+        var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+        var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
+        var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器
+
+        if (isIE) {
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            if (fIEVersion < 10) {
+                window.location = "https://zhouhoujie.github.io/Compatibility.html";
+            } else {
+                window.location = "https://zhouhoujie.github.io//#/Main";
+            }
+        } else {
+            window.location = "https://zhouhoujie.github.io//#/Main";
+        }
+    }
+</script>
+
+</html>
